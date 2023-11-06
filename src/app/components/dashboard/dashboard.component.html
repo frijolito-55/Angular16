@@ -1,0 +1,40 @@
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-content-center">
+            <div class="col-8 barra">
+                <img src="../../../assets/img/logo.png" alt="Logo">
+            </div>
+            <div class="col-4 text-right barra">
+                <ul class="navbar-nav mr-auto">
+                    <li class="boton">
+                        <button type="button" class="btn btn-danger bi bi-box-arrow-left" (click)="logOut()">Salir</button>   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="barra-lateral col-12 col-sm-auto">
+                <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
+                    <a routerLink="/dashboard"><i class="bi bi-clipboard-pulse"></i><span>Mis citas</span></a>
+                    <a routerLink="/mispacientes"><i class="bi bi-person-circle"></i><span>Mis pacientes</span></a>
+                    <a routerLink="/subirreceta"><i class="bi bi-file-earmark-pdf-fill"></i><span>Subir receta</span></a>
+                </nav>
+            </div>
+            <main class="main col">
+                <div class="row justify-content-center align-content-center text-center">
+                    <div class="columna col-lg-6">
+                        <h3>MIS CITAS</h3>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+
+
+
