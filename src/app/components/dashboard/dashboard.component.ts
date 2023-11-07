@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-=======
-import { Component } from '@angular/core';
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
+
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-<<<<<<< HEAD
+
 export class DashboardComponent implements OnInit {
   dataUser: any;
 
@@ -34,8 +31,6 @@ export class DashboardComponent implements OnInit {
   }
 
 }
-=======
-export class DashboardComponent {
+export class DashoardComponent {
 
 }
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
