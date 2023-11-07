@@ -2,12 +2,9 @@ body {
     background: #f1f1f1;
 }
 
-<<<<<<< HEAD
 .boton {
     margin: 30px;
 }
-=======
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
 
 /* Estilo para el icono cita */
 i.bi-clipboard-pulse {
@@ -30,12 +27,8 @@ i.bi-file-earmark-pdf-fill {
     font-size: 30px; /* Tamaño del icono */
     margin-right: 15px; /* Espacio a la derecha del icono */
 }
-.barra {
-<<<<<<< HEAD
+.barra{
     background: #72ccf0;
-=======
-    background: #00ADEF;
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
     padding-top: 6px;
     padding-bottom: 6px;
     margin: 0;
