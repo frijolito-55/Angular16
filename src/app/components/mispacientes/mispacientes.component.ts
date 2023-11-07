@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-=======
-import { Component } from '@angular/core';
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
+
 
 @Component({
   selector: 'app-mispacientes',
   templateUrl: './mispacientes.component.html',
   styleUrls: ['./mispacientes.component.css']
 })
-<<<<<<< HEAD
 export class MispacientesComponent  implements OnInit{
   dataUser: any;
 
@@ -33,8 +29,5 @@ logOut() {
   this.afAuth.signOut().then(() => this.router.navigate(['/login']));
 }
 
-=======
-export class MispacientesComponent {
->>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
 
 }
