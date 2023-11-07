@@ -1,11 +1,19 @@
 <div class="wrapper">
     <div *ngIf="!loading" class="body">
         <img class="logo" src="../../../assets/img/logo.png" alt="Login">
+<<<<<<< HEAD
         <h1>BIENVENIDOS</h1>
         <form (ngSubmit)="login()" [formGroup]="loginUsuario">
             <div class="form-floating mb-3">
                 <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
                 <label  style="font-style: italic;"><i class="bi bi-envelope-fill"></i> Correo Electronico</label>
+=======
+        <h1>Login</h1>
+        <form (ngSubmit)="login()" [formGroup]="loginUsuario">
+            <div class="form-floating mb-3">
+                <input type="email" formControlName="email" class="form-control" placeholder="name@example.com">
+                <label>Email</label>
+>>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
                 <span *ngIf="loginUsuario.get('email')?.hasError('required') && loginUsuario.get('email')?.touched" class="text-danger errorLabel">
                     El <strong>correo</strong> es requerido
                 </span>
@@ -15,7 +23,11 @@
             </div>
             <div class="form-floating mb-3">
                 <input type="password" formControlName="password" class="form-control" placeholder="Password">
+<<<<<<< HEAD
                 <label style="font-style: italic;"><i class="bi bi-lock-fill"></i> Contraseña</label>
+=======
+                <label>Password</label>
+>>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
                 <span *ngIf="loginUsuario.get('password')?.hasError('required') && loginUsuario.get('password')?.touched" class="text-danger errorLabel">
                     La <strong>password</strong> es requerida
                 </span>
@@ -23,7 +35,11 @@
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary btn-lg" [disabled]="loginUsuario.invalid" >Ingresar</button>
             </div>
+<<<<<<< HEAD
             <p class="mt-3">¿No tienes cuenta? <a routerLink="/registrar-usuario">Registrar</a></p>
+=======
+            <p class="mt-3">No tienes cuenta? <a routerLink="/registrar-usuario">Registrar</a></p>
+>>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
             <a class="mt-3" routerLink="/recuperar-password">Recuperar Contraseña</a>
         </form>
     </div>

@@ -2,6 +2,7 @@
 html, body {
     height: 100%;
 }
+<<<<<<< HEAD
 /*Color y tamaño de los iconos*/
 .bi-envelope-fill {
     color: #1A81DC;
@@ -14,6 +15,8 @@ html, body {
 .italic-label {
     font-style: italic;
 }
+=======
+>>>>>>> a081836f245d328b349da0525d944f7704ebe4e3
 
 .wrapper {
     display: flex;
