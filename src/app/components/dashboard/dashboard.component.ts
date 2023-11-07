@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class DashboardComponent implements OnInit {
-  dataUser: { [key: string]: { correo: string, nombre: string, uid: string } } = {};
+  dataCitas: { [key: string]: { titulo: string, fecha: string, hora: string, descripcion: string, uid: string } } = {};
 
   constructor(private afAuth: AngularFireAuth,
       private router: Router) { }
@@ -21,19 +21,13 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.afAuth.currentUser.then(user => {
       if(user && user.emailVerified) {
-        // this.dataUser = user;
-        // console.log(user)
         const app = initializeApp(environment.firebase);
         const db = getDatabase(app);
-        const databaseRef = ref(db, '/Usuarios/');
-        // onValue(databaseRef, (snapshot) => {
-        //   const dataUser: { [key: string]: { correo: string, nombre: string, uid: string } } = snapshot.val();
-        //   console.log(dataUser); // Maneja los datos como desees
-        // });
+        const databaseRef = ref(db, '/citas_usuario/');
         onValue(databaseRef, (snapshot) => {
-          this.dataUser = snapshot.val();
-          console.log(this.dataUser); // Maneja los datos como desees
-        });
+        this.dataCitas = snapshot.val();
+        console.log(this.dataCitas); // Maneja los datos como desees
+      });
       } else {
         this.router.navigate(['/login']);
       }
