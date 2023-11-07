@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 //Moduloos
 import { AngularFireModule } from '@angular/fire/compat';
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +38,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    BrowserAnimationsModule, // required animations module
+    BrowserAnimationsModule,
+    CommonModule,
     ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],

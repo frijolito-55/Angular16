@@ -6,7 +6,7 @@
             </div>
             <div class="col-4 text-right barra">
                 <ul class="navbar-nav mr-auto">
-<<<<<<< HEAD
+
                     <li class="boton">
                         <button type="button" class="btn btn-danger bi bi-box-arrow-left" (click)="logOut()">Salir</button>
                 </ul>
@@ -25,8 +25,28 @@
             </div>
             <main class="main col">
                 <div class="row justify-content-center align-content-center text-center">
-                    <div class="columna col-lg-6">
+                    <div class="columna col-lg-12">
                         <h3>MIS CITAS</h3>
+
+                        <div *ngIf="dataUser">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">UID</th>
+                                        <th scope="col">Correo</th>
+                                        <th scope="col">Nombre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let usuario of dataUser | keyvalue">
+                                        <td>{{ usuario.key }}</td>
+                                        <td>{{ usuario.value.correo }}</td>
+                                        <td>{{ usuario.value.nombre }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
             </main>
