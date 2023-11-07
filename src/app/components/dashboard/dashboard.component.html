@@ -35,6 +35,7 @@
                                     <tr>
                                         <!-- <th scope="col">UID</th> -->
                                         <th scope="col">Nombre</th>
+                                        <th scope="col">Tipo de Cita</th>
                                         <th scope="col">Descripcion</th>
                                         <th scope="col">Fecha</th>
                                         <th scope="col">Horario</th>
@@ -43,6 +44,7 @@
                                 <tbody>
                                     <tr *ngFor="let usuario of dataCitas | keyvalue">
                                         <!-- <td>{{ usuario.key }}</td> -->
+                                        <td>{{ usuario.value.nombre }}</td>
                                         <td>{{ usuario.value.titulo }}</td>
                                         <td>{{ usuario.value.descripcion }}</td>
                                         <td>{{ usuario.value.fecha }}</td>

@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 
 export class DashboardComponent implements OnInit {
-  dataCitas: { [key: string]: { titulo: string, fecha: string, hora: string, descripcion: string, uid: string } } = {};
+  dataCitas: { [key: string]: { nombre: string, titulo: string, fecha: string, hora: string, descripcion: string, uid: string } } = {};
 
   constructor(private afAuth: AngularFireAuth,
       private router: Router) { }
@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
         const databaseRef = ref(db, '/citas_usuario/');
         onValue(databaseRef, (snapshot) => {
         this.dataCitas = snapshot.val();
-        console.log(this.dataCitas); // Maneja los datos como desees
+        // console.log(this.dataCitas); // Maneja los datos como desees
       });
       } else {
         this.router.navigate(['/login']);
